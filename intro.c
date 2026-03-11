@@ -72,38 +72,110 @@
 //     }
 //     )
 
-
-// --------------------------------------------------------------------------------- puneet sir DSA -------------------------------------------------------------------
-// #include <studio.h>
-// int main()
+//---------------------------------- delete first wala ---------------------------
+// void discharge first()
 // { 
-//     char a[] = "Programming 2020";
-//     printf ("%s",a+a[3]-a[5]);
-//  return 0; 
+//     if(is Empety())
+//     {
+//         <<"Empty";
+//         return;
+//     }
+//     Node* temp = head;
+//     head = head -> next;
+//     delete temp;
 // }
 
-
-// int main()
+//--------------------------------- delete lasa wala ----------------------------
+// void discharge last()
 // {
-//     char a[10];
-//     char *b = "string";
-//     int length =strlen(b);
-
-//     for( int i= 0; i<length; i++){
-
-//         a[i] = b[length-i];
+//     if(is Empety())
+//     {
+//         <<"Empty";
+//         return;
 //     }
-//     printf("%s" , a);
+//     if(head -> next == NULL)
+//     {
+//         delete head;
+//         head = NULL;
+//         return;
+//     }
+//     Node* temp = head;
+//     while(temp -> next -> next != NULL)
+//     {
+//         temp = temp -> next;
+//     }
+//     delete temp -> next;
+//     temp -> next = NULL;
+// }
 
-// return 0;}
+//--------------------------------- delet at position wala ----------------------------
+// void discharge at position(int pos)
+// {
+//     if(is Empety())
+//     {
+//         <<"Empty";
+//         return;
+//     }
+//     if(pos == 1)
+//     {
+//         discharge first();
+//         return;
+//     }
+//     Node* temp = head;
+//     for(int i=1; i<pos-1 && temp != NULL; i++)
+//     {
+//         temp = temp -> next;
+//     }
+//     if(temp == NULL || temp -> next == NULL)
+//     {
+//         <<"Invalid position";
+//         return;
+//     }
+//     Node* toDelete = temp -> next;
+//     temp -> next = temp -> next -> next;
+//     delete toDelete;
+// }
 
-//--------------------------------------------------------------- c++ --------------------------------------------------------------------------
+//---------------------------------- searching in linked list ----------------------------
+// Node* search(int ID)
+// {
+//     Node* temp = head;
+//     int pos = 0;
+//     while(temp != NULL)
+//     {
+//         if(temp -> pashent ID  == ID)
+//         {
+//             return temp;
+//         }
+//         temp = temp -> next;
+//         pos++;
+//     }
+//     return NULL; // not found
+// }
 
-constractor => is a special function whuch is used to inclised the object of its classs.... the constructor is invocked when ever an object of its accostatid class is created...
+//---------------------------------- update in linked list ----------------------------
+void update(int postion, int newID)
+{
+    Node* temp = search(postion);
+       Node* temp = head;
+       for(int i=0; i<postion && temp != NULL; i++)
+       {
+           temp = temp -> next;
+       }
+    
+    
+    
+    
+}
 
-function => 
-           two type => 
-                       standured / spacial
+
+//     if(temp == NULL)
+//     {
+//         <<"Patient not found";
+//         return;
+//     }
+//     temp -> marks = newID;
+// }
 
 
 
