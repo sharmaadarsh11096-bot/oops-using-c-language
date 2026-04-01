@@ -1,182 +1,3 @@
-// wap to add two numbers
-// c lang code
-
-// int main()
-// {
-//     int x,y,add=0; 
-//     printf("enta the value of x and y :");
-//     scanf("%d %d,"x, y);
-//     add = x+y;
-//     printf("the sum is %d, add"; 
-//         // printf(print formated)
-//     return 0;)
-// }
-
-// // c++
-// #include<isostream>
-// int main()
-// {
-//     int x,y, add=0;
-//     count << "enter the value ");
-//     (int >>x >>y;
-//     add = x+y;
-//     count <<"the sum:"<< add;
-//     return 0;
-
-// } 
-// develop a mod  whese the input is given by user about students details which include student id, name markes of 5 subject.
-// if parcentage >90 then 'o'
-// parcentage >80 &<=90 'A'
-// parcentage >70 &<=80 'B'
-// parcentage >60 &<=70 'C'
-// parcentage >50 &<=60 'D'
-// parcentage >40 &<=50 'P'
-// else fail.
-// class student 
-// {
-//     int id, marks=0;
-//     int marks [5];
-//     char name [30];
-//     public;
-//     void input ();
-//     void cal ();
-//     void print ();
-    
-//     };
-//       void student :: input ()
-//       {
-//         count <<"enter student's detail:";
-//         count <<"in enter student's id:";
-//         count >> student id;
-//         count>>"enter student name:";
-//         cin >> name;
-//       }
-// LOOP type-
-// 1 entry control 
-// 1.1 for loop for(initilization, condition, inc/dec)
-// 1.2 while loop (condition)
-// 2 exit control 
-// 2.1 do while loop     
-
-// void student :: cal ()
-// {
-//     for (int i=0; i<5; i++)
-//     {t marks = marks [i];= t marks = t marks + marks[i];
-//     }
-//     pa= t_marks / 50
-// }
-// void student :: print (
-//     { 
-//         count <<"id"<="\t name"<<" \t tstu marks " << " \t
-//       percentage
-//     }
-//     )
-
-//---------------------------------- delete first wala ---------------------------
-// void discharge first()
-// { 
-//     if(is Empety())
-//     {
-//         <<"Empty";
-//         return;
-//     }
-//     Node* temp = head;
-//     head = head -> next;
-//     delete temp;
-// }
-
-//--------------------------------- delete lasa wala ----------------------------
-// void discharge last()
-// {
-//     if(is Empety())
-//     {
-//         <<"Empty";
-//         return;
-//     }
-//     if(head -> next == NULL)
-//     {
-//         delete head;
-//         head = NULL;
-//         return;
-//     }
-//     Node* temp = head;
-//     while(temp -> next -> next != NULL)
-//     {
-//         temp = temp -> next;
-//     }
-//     delete temp -> next;
-//     temp -> next = NULL;
-// }
-
-//--------------------------------- delet at position wala ----------------------------
-// void discharge at position(int pos)
-// {
-//     if(is Empety())
-//     {
-//         <<"Empty";
-//         return;
-//     }
-//     if(pos == 1)
-//     {
-//         discharge first();
-//         return;
-//     }
-//     Node* temp = head;
-//     for(int i=1; i<pos-1 && temp != NULL; i++)
-//     {
-//         temp = temp -> next;
-//     }
-//     if(temp == NULL || temp -> next == NULL)
-//     {
-//         <<"Invalid position";
-//         return;
-//     }
-//     Node* toDelete = temp -> next;
-//     temp -> next = temp -> next -> next;
-//     delete toDelete;
-// }
-
-//---------------------------------- searching in linked list ----------------------------
-// Node* search(int ID)
-// {
-//     Node* temp = head;
-//     int pos = 0;
-//     while(temp != NULL)
-//     {
-//         if(temp -> pashent ID  == ID)
-//         {
-//             return temp;
-//         }
-//         temp = temp -> next;
-//         pos++;
-//     }
-//     return NULL; // not found
-// }
-
-//---------------------------------- update in linked list ----------------------------
-// void update(int postion, int newID)
-// {
-//     Node* temp = search(postion);
-//        Node* temp = head;
-//        for(int i=0; i<postion && temp != NULL; i++)
-//        {
-//            temp = temp -> next;
-//        }
-    
-    
-    
-    
-// }
-
-
-//     if(temp == NULL)
-//     {
-//         <<"Patient not found";
-//         return;
-//     }
-//     temp -> marks = newID;
-// }
-
 
 //1.wap for two numbers
 
@@ -197,7 +18,7 @@
 // using namespace std;
 // int main() {
 //     int a, b, c;
-//     cin >> a;
+//     cin >> a;u
 //     cin >> b;
 //     cin >> c;
 
@@ -1922,4 +1743,210 @@
 //     l.display();
 
 //     return 0;
+// // }
+// 65. WAP to print Fibonacci series using recursion
+// #include <iostream>
+// using namespace std;
+
+// class Fibonacci {
+// public:
+//     int fib(int n) {
+//         if (n <= 1)
+//             return n;
+//         return fib(n - 1) + fib(n - 2);
+//     }
+// };
+
+// int main() {
+//     Fibonacci obj;
+//     int n = 6;
+//     cout << "Fibonacci: " << obj.fib(n);
 // }
+// 66. WAP to print sum of digits of a number using recursion
+// #include <iostream>
+// using namespace std;
+
+// class SumDigits {
+// public:
+//     int sum(int n) {
+//         if (n == 0)
+//             return 0;
+//         return (n % 10) + sum(n / 10);
+//     }
+// };
+
+// int main() {
+//     SumDigits obj;
+//     cout << obj.sum(1234);
+// }
+// 67. WAP to reverse a number using recursion
+// #include <iostream>
+// using namespace std;
+
+// class ReverseNum {
+// public:
+//     int reverse(int n, int rev = 0) {
+//         if (n == 0)
+//             return rev;
+//         return reverse(n / 10, rev * 10 + n % 10);
+//     }
+// };
+
+// int main() {
+//     ReverseNum obj;
+//     cout << obj.reverse(1234);
+// }
+// 68. WAP to calculate power of a number using recursion
+// #include <iostream>
+// using namespace std;
+
+// class Power {
+// public:
+//     int power(int base, int exp) {
+//         if (exp == 0)
+//             return 1;
+//         return base * power(base, exp - 1);
+//     }
+// };
+
+// int main() {
+//     Power obj;
+//     cout << obj.power(2, 5);
+// }
+// 69. WAP to check for palindrome using recursion
+// #include <iostream>
+// using namespace std;
+
+// class Palindrome {
+// public:
+//     bool check(string s, int start, int end) {
+//         if (start >= end)
+//             return true;
+//         if (s[start] != s[end])
+//             return false;
+//         return check(s, start + 1, end - 1);
+//     }
+// };
+
+// int main() {
+//     Palindrome obj;
+//     string str = "madam";
+//     cout << (obj.check(str, 0, str.length() - 1) ? "Palindrome" : "Not Palindrome");
+// }
+// 70. WAP to perform binary search using recursion
+// #include <iostream>
+// using namespace std;
+
+// class BinarySearch {
+// public:
+//     int search(int arr[], int left, int right, int key) {
+//         if (left > right)
+//             return -1;
+
+//         int mid = (left + right) / 2;
+
+//         if (arr[mid] == key)
+//             return mid;
+//         else if (arr[mid] > key)
+//             return search(arr, left, mid - 1, key);
+//         else
+//             return search(arr, mid + 1, right, key);
+//     }
+// };
+
+// int main() {
+//     BinarySearch obj;
+//     int arr[] = {1, 3, 5, 7, 9};
+//     cout << obj.search(arr, 0, 4, 7);
+// }
+// 71. WAP to calculate GCD using recursion
+// #include <iostream>
+// using namespace std;
+
+// class GCD {
+// public:
+//     int gcd(int a, int b) {
+//         if (b == 0)
+//             return a;
+//         return gcd(b, a % b);
+//     }
+// };
+
+// int main() {
+//     GCD obj;
+//     cout << obj.gcd(48, 18);
+// }
+// 72. WAP to calculate LCM using recursion
+// #include <iostream>
+// using namespace std;
+
+// class GCD {
+// public:
+//     int gcd(int a, int b) {
+//         if (b == 0)
+//             return a;
+//         return gcd(b, a % b);
+//     }
+// };
+
+// int main() {
+//     GCD obj;
+//     cout << obj.gcd(48, 18);
+// }
+// 73. WAP to count digits of a number using recursion
+// #include <iostream>
+// using namespace std;
+
+// class CountDigits {
+// public:
+//     int count(int n) {
+//         if (n == 0)
+//             return 0;
+//         return 1 + count(n / 10);
+//     }
+// };
+
+// int main() {
+//     CountDigits obj;
+//     cout << obj.count(12345);
+// }
+// 74 . WAP to find the sum of items of an array using recursion
+// #include <iostream>
+// using namespace std;
+
+// class ArraySum {
+// public:
+//     int sum(int arr[], int n) {
+//         if (n == 0)
+//             return 0;
+//         return arr[n - 1] + sum(arr, n - 1);
+//     }
+// };
+
+// int main() {
+//     ArraySum obj;
+//     int arr[] = {1, 2, 3, 4};
+//     cout << obj.sum(arr, 4);
+// }
+// 75. WAP to print Tower of Hanoi using recursion
+// #include <iostream>
+// using namespace std;
+
+// class Hanoi {
+// public:
+//     void solve(int n, char from, char to, char aux) {
+//         if (n == 1) {
+//             cout << "Move disk 1 from " << from << " to " << to << endl;
+//             return;
+//         }
+//         solve(n - 1, from, aux, to);
+//         cout << "Move disk " << n << " from " << from << " to " << to << endl;
+//         solve(n - 1, aux, to, from);
+//     }
+// };
+
+// int main() {
+//     Hanoi obj;
+//     obj.solve(3, 'A', 'C', 'B');
+// }
+
