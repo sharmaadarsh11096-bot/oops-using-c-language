@@ -1,5 +1,5 @@
 
-//1.wap for two numbers
+// 1.wap for two numbers
 
 // #include <iostream>
 // using namespace std;
@@ -12,7 +12,7 @@
 //     return 0;
 // }
 
-//2.wap for finding greater of two numbers
+// 2.wap for finding greater of two numbers
 
 // #include <iostream>
 // using namespace std;
@@ -161,7 +161,7 @@
 //     return 0;
 // }
 
-//12.wap to add two numbers using class
+// 12.wap to add two numbers using class
 
 // #include <iostream>
 // using namespace std;
@@ -337,7 +337,7 @@
 //     Student() {
 //         roll = 0;
 //         name = "Not Assigned";
-//        
+       
 //     }
 //     void display() {
 //         cout << "Roll: " << roll << endl;
@@ -366,7 +366,7 @@
 //     Student(int r, string n) {
 //         roll = r;
 //         name = n;
-//        
+       
 //     }
 //     void display() {
 //         cout << "Roll: " << roll << endl;
@@ -396,7 +396,7 @@
    
 //     Student(const Student &s) {
 //         roll = s.roll;
-//       
+      
 //     }
 
 //     void display() {
@@ -424,14 +424,14 @@
     
 //     Number(int value) {
 //         data = new int(value);
-//         
+        
 //     }
 
     
 //     Number(Number &&obj) {
 //         data = obj.data;      
 //         obj.data = nullptr;   
-//         
+        
 //     }
 
 //     void display() {
@@ -461,7 +461,7 @@
 //     int breadth;
 
 // public:
-//     
+    
 //     Rectangle() {
 //         length = 0;
 //         breadth = 0;
@@ -914,7 +914,7 @@
 // public:
 //     void generate(int n) {
 //         for (int i = 0; i < n; i++) {
-//            
+           
 //             for (int space = 0; space < n - i - 1; space++) {
 //                 cout << " ";
 //             }
@@ -964,7 +964,7 @@
 //             list2.push_back(x);
 //         }
 //     }
-//
+
 // 49. wap to find the sum of items of an array 
 // #include <iostream>
 // using namespace std;
@@ -1228,7 +1228,7 @@
 //     obj.display(arr, size);
 //     return 0;
 // }
-//56. wap to create a linked list:
+// 56. wap to create a linked list:
 // #include<iostream>
 // using namespace std;
 // class node{
@@ -1419,7 +1419,7 @@
 //     list.display();
 
 //     list.insertBefore(30,25);
-//  
+ 
 //     list.display();
 // return 0;
 // }
@@ -1950,3 +1950,533 @@
 //     obj.solve(3, 'A', 'C', 'B');
 // }
 
+// 76.Print concentric square number pattern for given n
+// #include<iostream>
+// using namespace std;
+
+// class Pattern1 {
+// public:
+//     void solve(int n){
+//         int size = 2*n-1;
+//         for(int i=0;i<size;i++){
+//             for(int j=0;j<size;j++){
+//                 int minDist = min(min(i,j), min(size-i-1, size-j-1));
+//                 cout<<n - minDist<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Pattern1 obj;
+//     obj.solve(n);
+// }
+// 77.Problem: Print right-aligned staircase of #
+// class Staircase {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=i;j++) cout<<"#";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Staircase obj;
+//     obj.solve(n);
+// }
+// 78.Problem: Print left triangle star pattern.
+// class LeftPyramid {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     LeftPyramid obj;
+//     obj.solve(n);
+// }
+// 79.Inverted Pyramid
+// class InvertedPyramid {
+// public:
+//     void solve(int n){
+//         for(int i=n;i>=1;i--){
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     InvertedPyramid obj;
+//     obj.solve(n);
+// }
+// 80. Full Pyramid
+// class FullPyramid {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=2*i-1;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     FullPyramid obj;
+//     obj.solve(n);
+// }
+// 81.. Inverted Full Pyramid
+// class InvertedFull {
+// public:
+//     void solve(int n){
+//         for(int i=n;i>=1;i--){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=2*i-1;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     InvertedFull obj;
+//     obj.solve(n);
+// }
+// 82.Diamond Pattern
+// class Diamond {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=2*i-1;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//         for(int i=n-1;i>=1;i--){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=2*i-1;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Diamond obj;
+//     obj.solve(n);
+// }
+// 83.Hollow Square
+// class HollowSquare {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n;j++){
+//                 if(i==1||i==n||j==1||j==n) cout<<"*";
+//                 else cout<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     HollowSquare obj;
+//     obj.solve(n);
+// }
+// 84.Floyd’s Triangle
+// class Floyd {
+// public:
+//     void solve(int n){
+//         int num=1;
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=i;j++){
+//                 cout<<num++<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Floyd obj;
+//     obj.solve(n);
+// }
+// 85.0-1 Triangle
+// class BinaryTriangle {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=i;j++){
+//                 cout<<(i+j)%2<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     BinaryTriangle obj;
+//     obj.solve(n);
+// }
+// 86.Print pyramid with increasing numbers
+// #include<iostream>
+// using namespace std;
+
+// class NumberPyramid {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=i;j++) cout<<j<<" ";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     NumberPyramid obj;
+//     obj.solve(n);
+// }
+// 87.Palindrome Triangle
+// #include<iostream>
+// using namespace std;
+
+// class PalindromeTriangle {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=i;j>=1;j--) cout<<j;
+//             for(int j=2;j<=i;j++) cout<<j;
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     PalindromeTriangle obj;
+//     obj.solve(n);
+// }
+// 88.Pascal’s Triangle
+// #include<iostream>
+// using namespace std;
+
+// class Pascal {
+// public:
+//     int fact(int n){
+//         if(n==0) return 1;
+//         return n*fact(n-1);
+//     }
+
+//     void solve(int n){
+//         for(int i=0;i<n;i++){
+//             for(int j=0;j<=i;j++){
+//                 cout<<fact(i)/(fact(j)*fact(i-j))<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Pascal obj;
+//     obj.solve(n);
+// }
+// 89.Butterfly Pattern
+// #include<iostream>
+// using namespace std;
+
+// class Butterfly {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             for(int j=1;j<=2*(n-i);j++) cout<<" ";
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//         for(int i=n;i>=1;i--){
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             for(int j=1;j<=2*(n-i);j++) cout<<" ";
+//             for(int j=1;j<=i;j++) cout<<"*";
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     Butterfly obj;
+//     obj.solve(n);
+// }
+// 90.Hollow Pyramid
+// #include<iostream>
+// using namespace std;
+
+// class HollowPyramid {
+// public:
+//     void solve(int n){
+//         for(int i=1;i<=n;i++){
+//             for(int j=1;j<=n-i;j++) cout<<" ";
+//             for(int j=1;j<=2*i-1;j++){
+//                 if(j==1 || j==2*i-1 || i==n) cout<<"*";
+//                 else cout<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+// };
+
+// int main(){
+//     int n; cin>>n;
+//     HollowPyramid obj;
+//     obj.solve(n);
+// }
+
+
+// 91.Find two indices such that nums[i] + nums[j] = target
+
+// #include<iostream>
+// #include<vector>
+// #include<unordered_map>
+// using namespace std;
+
+// class TwoSum {
+// public:
+//     vector<int> solve(vector<int>& nums, int target){
+//         unordered_map<int,int> mp;
+//         for(int i=0;i<nums.size();i++){
+//             int diff = target - nums[i];
+//             if(mp.count(diff)) return {mp[diff], i};
+//             mp[nums[i]] = i;
+//         }
+//         return {};
+//     }
+// };
+
+// int main(){
+//     vector<int> nums = {2,7,11,15};
+//     int target = 9;
+//     TwoSum obj;
+//     vector<int> ans = obj.solve(nums,target);
+//     cout<<ans[0]<<" "<<ans[1];
+// }
+// 92.Remove duplicates in-place
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class RemoveDuplicates {
+// public:
+//     int solve(vector<int>& nums){
+//         int i=0;
+//         for(int j=1;j<nums.size();j++){
+//             if(nums[i]!=nums[j]) nums[++i]=nums[j];
+//         }
+//         return i+1;
+//     }
+// };
+
+// int main(){
+//     vector<int> nums={1,1,2};
+//     RemoveDuplicates obj;
+//     cout<<obj.solve(nums);
+// }
+// 93.Find max sum of subarray
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class MaxSubarray {
+// public:
+//     int solve(vector<int>& nums){
+//         int sum=0, maxi=INT_MIN;
+//         for(int x:nums){
+//             sum+=x;
+//             maxi=max(maxi,sum);
+//             if(sum<0) sum=0;
+//         }
+//         return maxi;
+//     }
+// };
+
+// int main(){
+//     vector<int> nums={-2,1,-3,4,-1,2,1,-5,4};
+//     MaxSubarray obj;
+//     cout<<obj.solve(nums);
+// }
+// 94. move zeroes
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class MoveZeroes {
+// public:
+//     void solve(vector<int>& nums){
+//         int j=0;
+//         for(int i=0;i<nums.size();i++){
+//             if(nums[i]!=0) swap(nums[i],nums[j++]);
+//         }
+//     }
+// };
+
+// int main(){
+//     vector<int> nums={0,1,0,3,12};
+//     MoveZeroes obj;
+//     obj.solve(nums);
+//     for(int x:nums) cout<<x<<" ";
+// }
+// 95.rotate __ARRAY
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+
+// class RotateArray {
+// public:
+//     void solve(vector<int>& nums, int k){
+//         int n=nums.size();
+//         k%=n;
+//         reverse(nums.begin(),nums.end());
+//         reverse(nums.begin(),nums.begin()+k);
+//         reverse(nums.begin()+k,nums.end());
+//     }
+// };
+
+// int main(){
+//     vector<int> nums={1,2,3,4,5,6,7};
+//     RotateArray obj;
+//     obj.solve(nums,3);
+//     for(int x:nums) cout<<x<<" ";
+// }
+// 96.best time to buy and sell stock
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class Stock {
+// public:
+//     int solve(vector<int>& prices){
+//         int minp=INT_MAX, profit=0;
+//         for(int p:prices){
+//             minp=min(minp,p);
+//             profit=max(profit,p-minp);
+//         }
+//         return profit;
+//     }
+// };
+
+// int main(){
+//     vector<int> prices={7,1,5,3,6,4};
+//     Stock obj;
+//     cout<<obj.solve(prices);
+// }
+// 97.contains duplicate
+// #include<iostream>
+// #include<vector>
+// #include<unordered_set>
+// using namespace std;
+
+// class ContainsDuplicate {
+// public:
+//     bool solve(vector<int>& nums){
+//         unordered_set<int> s(nums.begin(),nums.end());
+//         return s.size()!=nums.size();
+//     }
+// };
+
+// int main(){
+//     vector<int> nums={1,2,3,1};
+//     ContainsDuplicate obj;
+//     cout<<obj.solve(nums);
+// }
+// 98.intersection of two arrays
+// #include<iostream>
+// #include<vector>
+// #include<unordered_set>
+// using namespace std;
+
+// class Intersection {
+// public:
+//     vector<int> solve(vector<int>& a, vector<int>& b){
+//         unordered_set<int> s(a.begin(),a.end()), res;
+//         for(int x:b) if(s.count(x)) res.insert(x);
+//         return vector<int>(res.begin(),res.end());
+//     }
+// };
+
+// int main(){
+//     vector<int> a={1,2,2,1}, b={2,2};
+//     Intersection obj;
+//     vector<int> ans=obj.solve(a,b);
+//     for(int x:ans) cout<<x<<" ";
+// }
+// 99.plus one
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class PlusOne {
+// public:
+//     vector<int> solve(vector<int>& digits){
+//         for(int i=digits.size()-1;i>=0;i--){
+//             if(digits[i]<9){ digits[i]++; return digits; }
+//             digits[i]=0;
+//         }
+//         digits.insert(digits.begin(),1);
+//         return digits;
+//     }
+// };
+
+// int main(){
+//     vector<int> digits={9,9};
+//     PlusOne obj;
+//     vector<int> ans=obj.solve(digits);
+//     for(int x:ans) cout<<x;
+// }
+// 100.merge sorted array
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// class MergeArray {
+// public:
+//     void solve(vector<int>& a,int m, vector<int>& b,int n){
+//         int i=m-1,j=n-1,k=m+n-1;
+//         while(j>=0){
+//             if(i>=0 && a[i]>b[j]) a[k--]=a[i--];
+//             else a[k--]=b[j--];
+//         }
+//     }
+// };
+
+// int main(){
+//     vector<int> a={1,2,3,0,0,0}, b={2,5,6};
+//     MergeArray obj;
+//     obj.solve(a,3,b,3);
+//     for(int x:a) cout<<x<<" ";
+// }
+
+
+    

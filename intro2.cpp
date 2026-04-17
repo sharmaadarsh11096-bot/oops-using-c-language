@@ -332,23 +332,245 @@
 
 
 
-class account
-{ int bal;
-public:
-account(int b)
-{
-    bal = b;
-}
-account operator ++(account obj)
-{
-    return bal + obj. bal;
-}};
-int main()
-{
-    account a(1000;
-    account b(2000);
-    account sum = a + b;
-    cout << sum.bal
-    return 0;
-}
+// class account
+// { int bal;
+// public:
+// account(int b)
+// {
+//     bal = b;
+// }
+// account operator ++(account obj)
+// {
+//     return bal + obj. bal;
+// }};
+// int main()
+// {
+//     account a(1000;
+//     account b(2000);
+//     account sum = a + b;
+//     cout << sum.bal
+//     return 0;
+// }
  
+ 
+//  #include <iostream>
+// using namespace std;
+
+// class Number {
+// private:
+//     int value;
+
+// public:
+//     Number(int v = 0) {
+//         value = v;
+//     }
+
+//     // Pre-increment operator overloading
+//     Number operator ++ () {
+//         ++value;        // increment first
+//         return *this;   // return updated object
+//     }
+
+//     void display() {
+//         cout << "Value: " << value << endl;
+//     }
+// };
+
+// int main() {
+//     Number n1(5);
+
+//     ++n1;   // calling overloaded operator
+
+//     n1.display();
+
+//     return 0;
+// }
+// #include <iostream>
+// // using namespace std;
+
+// // class Account {
+// // private:
+// //     int acc_no;
+// //     float balance;
+
+// // public:
+// //     Account(int a = 0, float b = 0) {
+// //         acc_no = a;
+// //         balance = b;
+// //     }
+
+// //     Account operator++() {
+// //         balance = balance + 1000; 
+// //         return *this;
+// //     }
+
+// //     void display() {
+// //         cout << "Account No: " << acc_no << endl;
+// //         cout << "Balance: " << balance << endl;
+// //     }
+// // };
+
+// // int main() {
+// //     Account acc1(101, 5000);
+
+// //     ++acc1;  
+
+// //     acc1.display();
+
+// //     return 0;
+// // }
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Wallet {
+// private:
+//     double balance;
+//     vector<double> transactions;
+
+// public:
+//     Wallet(double b = 0) {
+//         balance = b;
+//     }
+
+//     // + operator (add money OR merge wallets)
+//     Wallet operator + (const Wallet &w) {
+//         return Wallet(balance + w.balance);
+//     }
+
+//     // - operator (spend money)
+//     Wallet operator - (double amount) {
+//         return Wallet(balance - amount);
+//     }
+
+//     // == operator
+//     bool operator == (const Wallet &w) {
+//         return balance == w.balance;
+//     }
+
+//     // > operator
+//     bool operator > (const Wallet &w) {
+//         return balance > w.balance;
+//     }
+
+//     // < operator
+//     bool operator < (const Wallet &w) {
+//         return balance < w.balance;
+//     }
+
+//     // Assignment operator
+//     Wallet& operator = (const Wallet &w) {
+//         if(this != &w) {
+//             balance = w.balance;
+//             transactions = w.transactions;
+//         }
+//         return *this;
+//     }
+
+//     // Prefix ++ (deposit fixed amount)
+//     Wallet operator ++ () {
+//         balance += 100; // deposit ₹100
+//         return *this;
+//     }
+
+//     // Postfix ++
+//     Wallet operator ++ (int) {
+//         Wallet temp = *this;
+//         balance += 100;
+//         return temp;
+//     }
+
+//     // [] operator (transaction access)
+//     double operator [] (int index) {
+//         return transactions[index];
+//     }
+
+//     // () operator (apply interest)
+//     void operator () (double rate) {
+//         balance += balance * rate / 100;
+//     }
+
+//     // Add transaction
+//     void addTransaction(double amt) {
+//         transactions.push_back(amt);
+//     }
+
+//     // << operator
+//     friend ostream& operator << (ostream &out, const Wallet &w) {
+//         out << "Balance: " << w.balance;
+//         return out;
+//     }
+
+//     // >> operator
+//     friend istream& operator >> (istream &in, Wallet &w) {
+//         in >> w.balance;
+//         return in;
+//     }
+// };
+
+// int main() {
+//     Wallet w1(1000), w2(500);
+
+//     // Add money (merge wallets)
+//     Wallet w3 = w1 + w2;
+
+//     // Spend money
+//     w3 = w3 - 200;
+
+//     // Compare
+//     if(w1 > w2)
+//         cout << "w1 has more money\n";
+
+//     // Deposit
+//     ++w1;
+
+//     // Assignment
+//     w2 = w1;
+
+//     // Interest
+//     w1(10); // 10% interest
+
+//     // Transactions
+//     w1.addTransaction(200);
+//     w1.addTransaction(-50);
+
+//     cout << "Transaction[0]: " << w1[0] << endl;
+
+//     // Output
+//     cout << w1 << endl;
+//     #include <iostream>
+// using namespace std;
+
+// class pattern{
+//     public:
+
+//     void inverted(int n){
+//         for(int i=0;i<4;i++){
+//             for(int j=4; j>=i; j--)
+            
+//                 cout<<"* ";
+//               cout<<endl; 
+//         }}};
+
+//         int main(){
+//             pattern obj;
+//             obj.inverted(5);
+
+//     }
+    //  .........................................file handlingi n c++............................................................
+    //The compuer program work with file a use to store data and information permanently .
+    a file is a bunch of file stored under a specific name on a storege device.
+    stream rafer to a seqence of bites every file linked to a stream and each stream is asoseated  with particuler class there are two types of __FILE-
+    1- text __FILE__2- binary file 
+   1. Text File- store the information in ASCII character. 
+  - in the text filw each line of text terminated with a special character none as eol ( end of line) and delemiter charcter when the end of line character 
+  is read or return the sertan internal translation take.
+   2. Binary File- take the information into in the same format as it is held in memmory in binary file no delemeter are used and no traslation binary files are faster 
+   and esyer  to read and write by defult a file in c++ a conseder as text file.
+   1.input file stream class provide the          it in haret the function get line read and function spotive rendome accses ;
+   fromm istream class define in side the header file iostream.h .
+   2- output file stream class-
+    provide output operation it in harit in function put write along with function spoting rondom access from ostream class define in side the header file iostream.h .
+   3- file stream class- it is input and output class which provide simentensly input and output operation it in harit all the function from istream and osream class define in 
+   side the header stream class.
+   
